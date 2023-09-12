@@ -1,6 +1,55 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: sans-serif;
+}
+
+body{
+    background-color: #1f1e1e;
+    color: #fff;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    margin-bottom: 5vh;
+}
+
+.hidden{
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(-100%);
+    transition: all .7s;
+    transition-delay: .2s;
+}
+
+/* This code is just to be polite. doesnt work for my setup */
+/* @media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+} */
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* .things{
+    display: flex;
+} */
+
+.thing:nth-child(2){
+    transition-delay: 400ms;
+}
+.thing:nth-child(3){
+    transition-delay: 600ms;
+}
+.thing:nth-child(4){
+    transition-delay: 800ms;
 }
